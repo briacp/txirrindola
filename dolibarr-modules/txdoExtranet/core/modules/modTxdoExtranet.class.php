@@ -16,11 +16,11 @@
  */
 
 /**
- *  \defgroup   txdo_extranet     Module Txirrindola
+ *  \defgroup   txdoExtranet     Module Txirrindola
  *  \brief      Example of a module descriptor.
- *              Such a file must be copied into htdocs/txdo_extranet/core/modules directory.
- *  \file       htdocs/txdo_extranet/core/modules/modTxdoExtranet.class.php
- *  \ingroup    txdo_extranet
+ *              Such a file must be copied into htdocs/txdoExtranet/core/modules directory.
+ *  \file       htdocs/txdoExtranet/core/modules/modTxdoExtranet.class.php
+ *  \ingroup    txdoExtranet
  *  \brief      Description and activation file for module Txirrindola
  */
 include_once DOL_DOCUMENT_ROOT .'/core/modules/DolibarrModules.class.php';
@@ -72,12 +72,12 @@ class modTxdoExtranet extends DolibarrModules
         // Name of image file used for this module.
         // If file is in theme/yourtheme/img directory under name object_pictovalue.png, use this->picto='pictovalue'
         // If file is in module/img directory under name object_pictovalue.png, use this->picto='pictovalue@module'
-        $this->picto='txdo@txdo_extranet';
+        $this->picto='txdo@txdoExtranet';
 
         // Defined all module parts (triggers, login, substitutions, menus, css, etc...)
-        // for default path (eg: /txdo_extranet/core/xxxxx) (0=disable, 1=enable)
-        // for specific path of parts (eg: /txdo_extranet/core/modules/barcode)
-        // for specific css file (eg: /txdo_extranet/css/txdo_extranet.css.php)
+        // for default path (eg: /txdoExtranet/core/xxxxx) (0=disable, 1=enable)
+        // for specific path of parts (eg: /txdoExtranet/core/modules/barcode)
+        // for specific css file (eg: /txdoExtranet/css/txdoExtranet.css.php)
         //$this->module_parts = array(
         //                          'triggers' => 0,                                    // Set this to 1 if module has its own trigger directory (core/triggers)
         //                          'login' => 0,                                       // Set this to 1 if module has its own login method directory (core/login)
@@ -87,23 +87,23 @@ class modTxdoExtranet extends DolibarrModules
         //                          'tpl' => 0,                                         // Set this to 1 if module overwrite template dir (core/tpl)
         //                          'barcode' => 0,                                     // Set this to 1 if module has its own barcode directory (core/modules/barcode)
         //                          'models' => 0,                                      // Set this to 1 if module has its own models directory (core/modules/xxx)
-        //                          'css' => array('/txdo_extranet/css/txdo_extranet.css.php'), // Set this to relative path of css file if module has its own css file
-        //                          'js' => array('/txdo_extranet/js/txdo_extranet.js'),          // Set this to relative path of js file if module must load a js on all pages
+        //                          'css' => array('/txdoExtranet/css/txdoExtranet.css.php'), // Set this to relative path of css file if module has its own css file
+        //                          'js' => array('/txdoExtranet/js/txdoExtranet.js'),          // Set this to relative path of js file if module must load a js on all pages
         //                          'hooks' => array('hookcontext1','hookcontext2',...) // Set here all hooks context managed by module. You can also set hook context 'all'
         //                          'dir' => array('output' => 'othermodulename'),      // To force the default directories names
-        //                          'workflow' => array('WORKFLOW_MODULE1_YOURACTIONTYPE_MODULE2'=>array('enabled'=>'! empty($conf->module1->enabled) && ! empty($conf->module2->enabled)', 'picto'=>'yourpicto@txdo_extranet')) // Set here all workflow context managed by module
+        //                          'workflow' => array('WORKFLOW_MODULE1_YOURACTIONTYPE_MODULE2'=>array('enabled'=>'! empty($conf->module1->enabled) && ! empty($conf->module2->enabled)', 'picto'=>'yourpicto@txdoExtranet')) // Set here all workflow context managed by module
         //                        );
         $this->module_parts = array(
            //'triggers' => 1,
-           //'js' => array('/txdo_extranet/js/txdo_extranet.js'),          // Set this to relative path of js file if module must load a js on all pages
+           //'js' => array('/txdoExtranet/js/txdo_extranet.js'),          // Set this to relative path of js file if module must load a js on all pages
         );
 
         // Data directories to create when module is enabled.
-        // Example: this->dirs = array("/txdo_extranet/temp");
+        // Example: this->dirs = array("/txdoExtranet/temp");
         $this->dirs = array();
 
-        // Config pages. Put here list of php page, stored into txdo_extranet/admin directory, to use to setup module.
-        //$this->config_page_url = array("mysetuppage.php@txdo_extranet");
+        // Config pages. Put here list of php page, stored into txdoExtranet/admin directory, to use to setup module.
+        //$this->config_page_url = array("mysetuppage.php@txdoExtranet");
 
         // Dependencies
         $this->hidden = false;          // A condition to hide module
@@ -112,7 +112,7 @@ class modTxdoExtranet extends DolibarrModules
         $this->conflictwith = array();  // List of modules id this module is in conflict with
         $this->phpmin = array(5,0);                 // Minimum version of PHP required by module
         $this->need_dolibarr_version = array(3,0);  // Minimum version of Dolibarr required by module
-        $this->langfiles = array("mylangfile@txdo_extranet");
+        $this->langfiles = array("mylangfile@txdoExtranet");
 
         // Constants
         // List of particular constants to add when module is enabled (key, 'chaine', value, desc, visible, 'current' or 'allentities', deleteonunactive)
@@ -122,8 +122,8 @@ class modTxdoExtranet extends DolibarrModules
         $this->const = array();
 
         // Array to add new pages in new tabs
-        // Example: $this->tabs = array('objecttype:+tabname1:Title1:mylangfile@txdo_extranet:$user->rights->txirrindola->read:/txdo_extranet/mynewtab1.php?id=__ID__',                     // To add a new tab identified by code tabname1
-        //                              'objecttype:+tabname2:SUBSTITUTION_Title2:mylangfile@txdo_extranet:$user->rights->othermodule->read:/txdo_extranet/mynewtab2.php?id=__ID__',    // To add another new tab identified by code tabname2. Label will be result of calling all substitution functions on 'Title2' key.
+        // Example: $this->tabs = array('objecttype:+tabname1:Title1:mylangfile@txdoExtranet:$user->rights->txirrindola->read:/txdoExtranet/mynewtab1.php?id=__ID__',                     // To add a new tab identified by code tabname1
+        //                              'objecttype:+tabname2:SUBSTITUTION_Title2:mylangfile@txdoExtranet:$user->rights->othermodule->read:/txdoExtranet/mynewtab2.php?id=__ID__',    // To add another new tab identified by code tabname2. Label will be result of calling all substitution functions on 'Title2' key.
         //                              'objecttype:-tabname:NU:conditiontoremove');                                                                                            // To remove an existing tab identified by code tabname
         // where objecttype can be
         // 'categories_x'     to add a tab in category view (replace 'x' by type of category (0=product, 1=supplier, 2=customer, 3=member)
@@ -147,17 +147,17 @@ class modTxdoExtranet extends DolibarrModules
         // 'user'             to add a tab in user view
         $this->tabs = array();
 
-        if (! isset($conf->txdo_extranet) || ! isset($conf->txdo_extranet->enabled))
+        if (! isset($conf->txdoExtranet) || ! isset($conf->txdoExtranet->enabled))
         {
-            $conf->txdo_extranet=new stdClass();
-            $conf->txdo_extranet->enabled=0;
+            $conf->txdoExtranet=new stdClass();
+            $conf->txdoExtranet->enabled=0;
         }
         
         // Dictionaries
         $this->dictionaries=array();
         /* Example:
         $this->dictionaries=array(
-            'langs'=>'mylangfile@txdo_extranet',
+            'langs'=>'mylangfile@txdoExtranet',
             'tabname'=>array(MAIN_DB_PREFIX."table1",MAIN_DB_PREFIX."table2",MAIN_DB_PREFIX."table3"),      // List of tables we want to see into dictonnary editor
             'tablib'=>array("Table1","Table2","Table3"),                                                    // Label of tables
             'tabsql'=>array('SELECT f.rowid as rowid, f.code, f.label, f.active FROM '.MAIN_DB_PREFIX.'table1 as f','SELECT f.rowid as rowid, f.code, f.label, f.active FROM '.MAIN_DB_PREFIX.'table2 as f','SELECT f.rowid as rowid, f.code, f.label, f.active FROM '.MAIN_DB_PREFIX.'table3 as f'),   // Request to select fields
@@ -166,7 +166,7 @@ class modTxdoExtranet extends DolibarrModules
             'tabfieldvalue'=>array("code,label","code,label","code,label"),                                                                             // List of fields (list of fields to edit a record)
             'tabfieldinsert'=>array("code,label","code,label","code,label"),                                                                            // List of fields (list of fields for insert)
             'tabrowid'=>array("rowid","rowid","rowid"),                                                                                                 // Name of columns with primary key (try to always name it 'rowid')
-            'tabcond'=>array($conf->txdo_extranet->enabled,$conf->txdo_extranet->enabled,$conf->txdo_extranet->enabled)                                               // Condition to show each dictionary
+            'tabcond'=>array($conf->txdoExtranet->enabled,$conf->txdoExtranet->enabled,$conf->txdoExtranet->enabled)                                               // Condition to show each dictionary
         );
         */
 
@@ -175,9 +175,9 @@ class modTxdoExtranet extends DolibarrModules
         $this->boxes = array();         // List of boxes
         // Example:
         //$this->boxes=array(
-        //    0=>array('file'=>'myboxa.php@txdo_extranet','note'=>'','enabledbydefaulton'=>'Home'),
-        //    1=>array('file'=>'myboxb.php@txdo_extranet','note'=>''),
-        //    2=>array('file'=>'myboxc.php@txdo_extranet','note'=>'')
+        //    0=>array('file'=>'myboxa.php@txdoExtranet','note'=>'','enabledbydefaulton'=>'Home'),
+        //    1=>array('file'=>'myboxb.php@txdoExtranet','note'=>''),
+        //    2=>array('file'=>'myboxc.php@txdoExtranet','note'=>'')
         //);
 
         // Cronjobs
@@ -209,12 +209,12 @@ class modTxdoExtranet extends DolibarrModules
         //    'fk_menu'=>'',                          // '' if this is a top menu. For left menu, use 'fk_mainmenu=xxx' or 'fk_mainmenu=xxx,fk_leftmenu=yyy' where xxx is mainmenucode and yyy is a leftmenucode
         //    'type'=>'top',                          // This is a Top menu entry
         //    'titre'=>'Adhérent Txdo',
-        //    'mainmenu'=>'txdo_extranet',
-        //    'leftmenu'=>'txdo_extranet',
-        //    'url'=>'/txdo_extranet/adherent/page.php',
+        //    'mainmenu'=>'txdoExtranet',
+        //    'leftmenu'=>'txdoExtranet',
+        //    'url'=>'/txdoExtranet/adherent/page.php',
         //    //'langs'=>'mylangfile@mymodule',         // Lang file to use (without .lang) by module. File must be in langs/code_CODE/ directory.
         //    'position'=>100,
-        //    'enabled'=>'$conf->txdo_extranet->enabled',
+        //    'enabled'=>'$conf->txdoExtranet->enabled',
         //    'perms'=>'0',                           // Use 'perms'=>'$user->rights->mymodule->level1->level2' if you want your menu with a permission rules
         //    'user'=>2                               // 0=Menu for internal users, 1=external users, 2=both
         //);                             
@@ -224,7 +224,7 @@ class modTxdoExtranet extends DolibarrModules
             'fk_menu'=>'fk_mainmenu=members,fk_leftmenu=setup',
             'type'=>'left',
             'titre'=>"Exports Txirrind'Ola",
-            'url'=>'/txdo_extranet/mailjet_page.php',
+            'url'=>'/txdoExtranet/mailjet_page.php',
             'perms'=> '$user->rights->export->lire',
             'user'=>0
         );
@@ -242,7 +242,7 @@ class modTxdoExtranet extends DolibarrModules
     {
         $sql = array();
 
-        //$this->_load_tables('/txdo_extranet/sql/');
+        //$this->_load_tables('/txdoExtranet/sql/');
 
         return $this->_init($sql, $options);
     }
