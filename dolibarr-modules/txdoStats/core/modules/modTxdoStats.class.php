@@ -16,11 +16,11 @@
  */
 
 /**
- *  \defgroup   txdo_stats     Module Txirrindola
+ *  \defgroup   txdoStats     Module Txirrindola
  *  \brief      Example of a module descriptor.
- *              Such a file must be copied into htdocs/txdo_stats/core/modules directory.
- *  \file       htdocs/txdo_stats/core/modules/modTxdoStats.class.php
- *  \ingroup    txdo_stats
+ *              Such a file must be copied into htdocs/txdoStats/core/modules directory.
+ *  \file       htdocs/txdoStats/core/modules/modTxdoStats.class.php
+ *  \ingroup    txdoStats
  *  \brief      Description and activation file for module Txirrindola
  */
 include_once DOL_DOCUMENT_ROOT .'/core/modules/DolibarrModules.class.php';
@@ -72,12 +72,12 @@ class modTxdoStats extends DolibarrModules
         // Name of image file used for this module.
         // If file is in theme/yourtheme/img directory under name object_pictovalue.png, use this->picto='pictovalue'
         // If file is in module/img directory under name object_pictovalue.png, use this->picto='pictovalue@module'
-        $this->picto='txdo@txdo_stats';
+        $this->picto='txdo@txdoStats';
 
         // Defined all module parts (triggers, login, substitutions, menus, css, etc...)
-        // for default path (eg: /txdo_stats/core/xxxxx) (0=disable, 1=enable)
-        // for specific path of parts (eg: /txdo_stats/core/modules/barcode)
-        // for specific css file (eg: /txdo_stats/css/txdo_stats.css.php)
+        // for default path (eg: /txdoStats/core/xxxxx) (0=disable, 1=enable)
+        // for specific path of parts (eg: /txdoStats/core/modules/barcode)
+        // for specific css file (eg: /txdoStats/css/txdoStats.css.php)
         //$this->module_parts = array(
         //                          'triggers' => 0,                                    // Set this to 1 if module has its own trigger directory (core/triggers)
         //                          'login' => 0,                                       // Set this to 1 if module has its own login method directory (core/login)
@@ -87,23 +87,23 @@ class modTxdoStats extends DolibarrModules
         //                          'tpl' => 0,                                         // Set this to 1 if module overwrite template dir (core/tpl)
         //                          'barcode' => 0,                                     // Set this to 1 if module has its own barcode directory (core/modules/barcode)
         //                          'models' => 0,                                      // Set this to 1 if module has its own models directory (core/modules/xxx)
-        //                          'css' => array('/txdo_stats/css/txdo_stats.css.php'), // Set this to relative path of css file if module has its own css file
-        //                          'js' => array('/txdo_stats/js/txdo_stats.js'),          // Set this to relative path of js file if module must load a js on all pages
+        //                          'css' => array('/txdoStats/css/txdoStats.css.php'), // Set this to relative path of css file if module has its own css file
+        //                          'js' => array('/txdoStats/js/txdoStats.js'),          // Set this to relative path of js file if module must load a js on all pages
         //                          'hooks' => array('hookcontext1','hookcontext2',...) // Set here all hooks context managed by module. You can also set hook context 'all'
         //                          'dir' => array('output' => 'othermodulename'),      // To force the default directories names
-        //                          'workflow' => array('WORKFLOW_MODULE1_YOURACTIONTYPE_MODULE2'=>array('enabled'=>'! empty($conf->module1->enabled) && ! empty($conf->module2->enabled)', 'picto'=>'yourpicto@txdo_stats')) // Set here all workflow context managed by module
+        //                          'workflow' => array('WORKFLOW_MODULE1_YOURACTIONTYPE_MODULE2'=>array('enabled'=>'! empty($conf->module1->enabled) && ! empty($conf->module2->enabled)', 'picto'=>'yourpicto@txdoStats')) // Set here all workflow context managed by module
         //                        );
         $this->module_parts = array(
            'triggers' => 1,
-           'js' => array('/txdo_stats/js/txdo_stats.js'),          // Set this to relative path of js file if module must load a js on all pages
+           'js' => array('/txdoStats/js/txdoStats.js'),          // Set this to relative path of js file if module must load a js on all pages
         );
 
         // Data directories to create when module is enabled.
-        // Example: this->dirs = array("/txdo_stats/temp");
+        // Example: this->dirs = array("/txdoStats/temp");
         $this->dirs = array();
 
-        // Config pages. Put here list of php page, stored into txdo_stats/admin directory, to use to setup module.
-        //$this->config_page_url = array("mysetuppage.php@txdo_stats");
+        // Config pages. Put here list of php page, stored into txdoStats/admin directory, to use to setup module.
+        //$this->config_page_url = array("mysetuppage.php@txdoStats");
 
         // Dependencies
         $this->hidden = false;          // A condition to hide module
@@ -112,7 +112,7 @@ class modTxdoStats extends DolibarrModules
         $this->conflictwith = array();  // List of modules id this module is in conflict with
         $this->phpmin = array(5,0);                 // Minimum version of PHP required by module
         $this->need_dolibarr_version = array(3,0);  // Minimum version of Dolibarr required by module
-        $this->langfiles = array("mylangfile@txdo_stats");
+        $this->langfiles = array("mylangfile@txdoStats");
 
         // Constants
         // List of particular constants to add when module is enabled (key, 'chaine', value, desc, visible, 'current' or 'allentities', deleteonunactive)
@@ -122,8 +122,8 @@ class modTxdoStats extends DolibarrModules
         $this->const = array();
 
         // Array to add new pages in new tabs
-        // Example: $this->tabs = array('objecttype:+tabname1:Title1:mylangfile@txdo_stats:$user->rights->txirrindola->read:/txdo_stats/mynewtab1.php?id=__ID__',                     // To add a new tab identified by code tabname1
-        //                              'objecttype:+tabname2:SUBSTITUTION_Title2:mylangfile@txdo_stats:$user->rights->othermodule->read:/txdo_stats/mynewtab2.php?id=__ID__',    // To add another new tab identified by code tabname2. Label will be result of calling all substitution functions on 'Title2' key.
+        // Example: $this->tabs = array('objecttype:+tabname1:Title1:mylangfile@txdoStats:$user->rights->txirrindola->read:/txdoStats/mynewtab1.php?id=__ID__',                     // To add a new tab identified by code tabname1
+        //                              'objecttype:+tabname2:SUBSTITUTION_Title2:mylangfile@txdoStats:$user->rights->othermodule->read:/txdoStats/mynewtab2.php?id=__ID__',    // To add another new tab identified by code tabname2. Label will be result of calling all substitution functions on 'Title2' key.
         //                              'objecttype:-tabname:NU:conditiontoremove');                                                                                            // To remove an existing tab identified by code tabname
         // where objecttype can be
         // 'categories_x'     to add a tab in category view (replace 'x' by type of category (0=product, 1=supplier, 2=customer, 3=member)
@@ -147,17 +147,17 @@ class modTxdoStats extends DolibarrModules
         // 'user'             to add a tab in user view
         $this->tabs = array();
 
-        if (! isset($conf->txdo_stats) || ! isset($conf->txdo_stats->enabled))
+        if (! isset($conf->txdoStats) || ! isset($conf->txdoStats->enabled))
         {
-            $conf->txdo_stats=new stdClass();
-            $conf->txdo_stats->enabled=0;
+            $conf->txdoStats=new stdClass();
+            $conf->txdoStats->enabled=0;
         }
         
         // Dictionaries
         $this->dictionaries=array();
         /* Example:
         $this->dictionaries=array(
-            'langs'=>'mylangfile@txdo_stats',
+            'langs'=>'mylangfile@txdoStats',
             'tabname'=>array(MAIN_DB_PREFIX."table1",MAIN_DB_PREFIX."table2",MAIN_DB_PREFIX."table3"),      // List of tables we want to see into dictonnary editor
             'tablib'=>array("Table1","Table2","Table3"),                                                    // Label of tables
             'tabsql'=>array('SELECT f.rowid as rowid, f.code, f.label, f.active FROM '.MAIN_DB_PREFIX.'table1 as f','SELECT f.rowid as rowid, f.code, f.label, f.active FROM '.MAIN_DB_PREFIX.'table2 as f','SELECT f.rowid as rowid, f.code, f.label, f.active FROM '.MAIN_DB_PREFIX.'table3 as f'),   // Request to select fields
@@ -166,7 +166,7 @@ class modTxdoStats extends DolibarrModules
             'tabfieldvalue'=>array("code,label","code,label","code,label"),                                                                             // List of fields (list of fields to edit a record)
             'tabfieldinsert'=>array("code,label","code,label","code,label"),                                                                            // List of fields (list of fields for insert)
             'tabrowid'=>array("rowid","rowid","rowid"),                                                                                                 // Name of columns with primary key (try to always name it 'rowid')
-            'tabcond'=>array($conf->txdo_stats->enabled,$conf->txdo_stats->enabled,$conf->txdo_stats->enabled)                                               // Condition to show each dictionary
+            'tabcond'=>array($conf->txdoStats->enabled,$conf->txdoStats->enabled,$conf->txdoStats->enabled)                                               // Condition to show each dictionary
         );
         */
 
@@ -175,9 +175,9 @@ class modTxdoStats extends DolibarrModules
         $this->boxes = array();         // List of boxes
         // Example:
         //$this->boxes=array(
-        //    0=>array('file'=>'myboxa.php@txdo_stats','note'=>'','enabledbydefaulton'=>'Home'),
-        //    1=>array('file'=>'myboxb.php@txdo_stats','note'=>''),
-        //    2=>array('file'=>'myboxc.php@txdo_stats','note'=>'')
+        //    0=>array('file'=>'myboxa.php@txdoStats','note'=>'','enabledbydefaulton'=>'Home'),
+        //    1=>array('file'=>'myboxb.php@txdoStats','note'=>''),
+        //    2=>array('file'=>'myboxc.php@txdoStats','note'=>'')
         //);
 
         // Cronjobs
@@ -209,12 +209,12 @@ class modTxdoStats extends DolibarrModules
         //    'fk_menu'=>'',                          // '' if this is a top menu. For left menu, use 'fk_mainmenu=xxx' or 'fk_mainmenu=xxx,fk_leftmenu=yyy' where xxx is mainmenucode and yyy is a leftmenucode
         //    'type'=>'top',                          // This is a Top menu entry
         //    'titre'=>'Adhérent Txdo',
-        //    'mainmenu'=>'txdo_stats',
-        //    'leftmenu'=>'txdo_stats',
-        //    'url'=>'/txdo_stats/adherent/page.php',
+        //    'mainmenu'=>'txdoStats',
+        //    'leftmenu'=>'txdoStats',
+        //    'url'=>'/txdoStats/adherent/page.php',
         //    //'langs'=>'mylangfile@mymodule',         // Lang file to use (without .lang) by module. File must be in langs/code_CODE/ directory.
         //    'position'=>100,
-        //    'enabled'=>'$conf->txdo_stats->enabled',
+        //    'enabled'=>'$conf->txdoStats->enabled',
         //    'perms'=>'0',                           // Use 'perms'=>'$user->rights->mymodule->level1->level2' if you want your menu with a permission rules
         //    'user'=>2                               // 0=Menu for internal users, 1=external users, 2=both
         //);                             
@@ -224,7 +224,7 @@ class modTxdoStats extends DolibarrModules
             'fk_menu'=>'fk_mainmenu=members,fk_leftmenu=setup',
             'type'=>'left',
             'titre'=>"Exports Txirrind'Ola",
-            'url'=>'/txdo_stats/mailjet_page.php',
+            'url'=>'/txdoStats/mailjet_page.php',
             'perms'=> '$user->rights->export->lire',
             'user'=>0
         );
@@ -242,7 +242,7 @@ class modTxdoStats extends DolibarrModules
     {
         $sql = array();
 
-        //$this->_load_tables('/txdo_stats/sql/');
+        //$this->_load_tables('/txdoStats/sql/');
 
         return $this->_init($sql, $options);
     }

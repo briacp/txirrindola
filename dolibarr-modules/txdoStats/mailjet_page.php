@@ -109,7 +109,7 @@ print <<<'_HTML_'
         <div class="titre">Export Adhérents Txirrind'Ola</div></td>
 _HTML_;
 
-print '<form method="POST" action="/txdo_stats/mailjet.php">';
+print '<form method="POST" action="/txdoStats/mailjet.php">';
 
 print <<<"_HTML_"
 
