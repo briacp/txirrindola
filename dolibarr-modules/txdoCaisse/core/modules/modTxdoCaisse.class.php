@@ -16,9 +16,9 @@
  */
 
 /**
- *  \defgroup   txdo_caisse     Module Txirrindola Caisse
+ *  \defgroup   txdoCaisse     Module Txirrindola Caisse
  *  \brief      Module caisse enregistreuse
- *  \file       htdocs/txdo_caisse/core/modules/modTxdoCaisse.class.php
+ *  \file       htdocs/txdoCaisse/core/modules/modTxdoCaisse.class.php
  *  \ingroup    txirrindola
  *  \brief      Description and activation file for module Txirrindola
  */
@@ -71,7 +71,7 @@ class modTxdoCaisse extends DolibarrModules
         // Name of image file used for this module.
         // If file is in theme/yourtheme/img directory under name object_pictovalue.png, use this->picto='pictovalue'
         // If file is in module/img directory under name object_pictovalue.png, use this->picto='pictovalue@module'
-        $this->picto='txdo@txdo_caisse';
+        $this->picto='txdo@txdoCaisse';
 
         // Defined all module parts (triggers, login, substitutions, menus, css, etc...)
         // for default path (eg: /txirrindola/core/xxxxx) (0=disable, 1=enable)
@@ -94,7 +94,7 @@ class modTxdoCaisse extends DolibarrModules
         //                        );
         $this->module_parts = array(
            'triggers' => 1,
-           'js' => array('/txdo_caisse/js/txdo_caisse.js'),          // Set this to relative path of js file if module must load a js on all pages
+           'js' => array('/txdoCaisse/js/txdo_caisse.js'),          // Set this to relative path of js file if module must load a js on all pages
         );
 
         // Data directories to create when module is enabled.
@@ -111,7 +111,7 @@ class modTxdoCaisse extends DolibarrModules
         $this->conflictwith = array();  // List of modules id this module is in conflict with
         $this->phpmin = array(5,0);                 // Minimum version of PHP required by module
         $this->need_dolibarr_version = array(3,0);  // Minimum version of Dolibarr required by module
-        $this->langfiles = array("mylangfile@txdo_caisse");
+        $this->langfiles = array("mylangfile@txdoCaisse");
 
         // Constants
         // List of particular constants to add when module is enabled (key, 'chaine', value, desc, visible, 'current' or 'allentities', deleteonunactive)

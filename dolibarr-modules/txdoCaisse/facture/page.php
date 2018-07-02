@@ -29,7 +29,7 @@ require_once DOL_DOCUMENT_ROOT.'/compta/facture/class/facture.class.php';
 //$langs->load("companies");
 //$langs->load("other");
 
-llxHeader('',"Facture Txirrind'Ola",'','','',0,array('txdo_caisse/js/pos.js'), array('txdo_caisse/css/facture.css') );
+llxHeader('',"Facture Txirrind'Ola",'','','',0,array('txdoCaisse/js/pos.js'), array('txdoCaisse/css/facture.css') );
 print load_fiche_titre("Facture Txirrind'Ola");
 
 /*
