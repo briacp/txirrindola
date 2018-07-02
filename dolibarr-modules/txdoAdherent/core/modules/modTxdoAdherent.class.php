@@ -16,10 +16,10 @@
  */
 
 /**
- *  \defgroup   txdo_adherent     Module Txirrindola
+ *  \defgroup   txdoAdherent     Module Txirrindola
  *  \brief      Example of a module descriptor.
- *              Such a file must be copied into htdocs/txdo_adherent/core/modules directory.
- *  \file       htdocs/txdo_adherent/core/modules/modTxdoAdherent.class.php
+ *              Such a file must be copied into htdocs/txdoAdherent/core/modules directory.
+ *  \file       htdocs/txdoAdherent/core/modules/modTxdoAdherent.class.php
  *  \ingroup    txirrindola
  *  \brief      Description and activation file for module Txirrindola
  */
@@ -72,12 +72,12 @@ class modTxdoAdherent extends DolibarrModules
         // Name of image file used for this module.
         // If file is in theme/yourtheme/img directory under name object_pictovalue.png, use this->picto='pictovalue'
         // If file is in module/img directory under name object_pictovalue.png, use this->picto='pictovalue@module'
-        $this->picto='txdo@txdo_adherent';
+        $this->picto='txdo@txdoAdherent';
 
         // Defined all module parts (triggers, login, substitutions, menus, css, etc...)
-        // for default path (eg: /txdo_adherent/core/xxxxx) (0=disable, 1=enable)
-        // for specific path of parts (eg: /txdo_adherent/core/modules/barcode)
-        // for specific css file (eg: /txdo_adherent/css/txdo_adherent.css.php)
+        // for default path (eg: /txdoAdherent/core/xxxxx) (0=disable, 1=enable)
+        // for specific path of parts (eg: /txdoAdherent/core/modules/barcode)
+        // for specific css file (eg: /txdoAdherent/css/txdoAdherent.css.php)
         //$this->module_parts = array(
         //                          'triggers' => 0,                                    // Set this to 1 if module has its own trigger directory (core/triggers)
         //                          'login' => 0,                                       // Set this to 1 if module has its own login method directory (core/login)
@@ -87,23 +87,23 @@ class modTxdoAdherent extends DolibarrModules
         //                          'tpl' => 0,                                         // Set this to 1 if module overwrite template dir (core/tpl)
         //                          'barcode' => 0,                                     // Set this to 1 if module has its own barcode directory (core/modules/barcode)
         //                          'models' => 0,                                      // Set this to 1 if module has its own models directory (core/modules/xxx)
-        //                          'css' => array('/txdo_adherent/css/txdo_adherent.css.php'), // Set this to relative path of css file if module has its own css file
-        //                          'js' => array('/txdo_adherent/js/txdo_adherent.js'),          // Set this to relative path of js file if module must load a js on all pages
+        //                          'css' => array('/txdoAdherent/css/txdoAdherent.css.php'), // Set this to relative path of css file if module has its own css file
+        //                          'js' => array('/txdoAdherent/js/txdoAdherent.js'),          // Set this to relative path of js file if module must load a js on all pages
         //                          'hooks' => array('hookcontext1','hookcontext2',...) // Set here all hooks context managed by module. You can also set hook context 'all'
         //                          'dir' => array('output' => 'othermodulename'),      // To force the default directories names
-        //                          'workflow' => array('WORKFLOW_MODULE1_YOURACTIONTYPE_MODULE2'=>array('enabled'=>'! empty($conf->module1->enabled) && ! empty($conf->module2->enabled)', 'picto'=>'yourpicto@txdo_adherent')) // Set here all workflow context managed by module
+        //                          'workflow' => array('WORKFLOW_MODULE1_YOURACTIONTYPE_MODULE2'=>array('enabled'=>'! empty($conf->module1->enabled) && ! empty($conf->module2->enabled)', 'picto'=>'yourpicto@txdoAdherent')) // Set here all workflow context managed by module
         //                        );
         $this->module_parts = array(
            'triggers' => 1,
-           'js' => array('/txdo_adherent/js/txdo_adherent.js'),          // Set this to relative path of js file if module must load a js on all pages
+           'js' => array('/txdoAdherent/js/txdo_adherent.js'),          // Set this to relative path of js file if module must load a js on all pages
         );
 
         // Data directories to create when module is enabled.
-        // Example: this->dirs = array("/txdo_adherent/temp");
+        // Example: this->dirs = array("/txdoAdherent/temp");
         $this->dirs = array();
 
-        // Config pages. Put here list of php page, stored into txdo_adherent/admin directory, to use to setup module.
-        //$this->config_page_url = array("mysetuppage.php@txdo_adherent");
+        // Config pages. Put here list of php page, stored into txdoAdherent/admin directory, to use to setup module.
+        //$this->config_page_url = array("mysetuppage.php@txdoAdherent");
 
         // Dependencies
         $this->hidden = false;          // A condition to hide module
@@ -112,7 +112,7 @@ class modTxdoAdherent extends DolibarrModules
         $this->conflictwith = array();  // List of modules id this module is in conflict with
         $this->phpmin = array(5,0);                 // Minimum version of PHP required by module
         $this->need_dolibarr_version = array(3,0);  // Minimum version of Dolibarr required by module
-        $this->langfiles = array("mylangfile@txdo_adherent");
+        $this->langfiles = array("mylangfile@txdoAdherent");
 
         // Constants
         // List of particular constants to add when module is enabled (key, 'chaine', value, desc, visible, 'current' or 'allentities', deleteonunactive)
@@ -122,7 +122,7 @@ class modTxdoAdherent extends DolibarrModules
         $this->const = array();
 
         // Array to add new pages in new tabs
-        // Example: $this->tabs = array('objecttype:+tabname1:Title1:mylangfile@txdo_adherent:$user->rights->txirrindola->read:/txirrindola/mynewtab1.php?id=__ID__',                     // To add a new tab identified by code tabname1
+        // Example: $this->tabs = array('objecttype:+tabname1:Title1:mylangfile@txdoAdherent:$user->rights->txirrindola->read:/txirrindola/mynewtab1.php?id=__ID__',                     // To add a new tab identified by code tabname1
         //                              'objecttype:+tabname2:SUBSTITUTION_Title2:mylangfile@txirrindola:$user->rights->othermodule->read:/txirrindola/mynewtab2.php?id=__ID__',    // To add another new tab identified by code tabname2. Label will be result of calling all substitution functions on 'Title2' key.
         //                              'objecttype:-tabname:NU:conditiontoremove');                                                                                            // To remove an existing tab identified by code tabname
         // where objecttype can be
@@ -147,17 +147,17 @@ class modTxdoAdherent extends DolibarrModules
         // 'user'             to add a tab in user view
         $this->tabs = array();
 
-        if (! isset($conf->txdo_adherent) || ! isset($conf->txdo_adherent->enabled))
+        if (! isset($conf->txdoAdherent) || ! isset($conf->txdoAdherent->enabled))
         {
-            $conf->txdo_adherent=new stdClass();
-            $conf->txdo_adherent->enabled=0;
+            $conf->txdoAdherent=new stdClass();
+            $conf->txdoAdherent->enabled=0;
         }
         
         // Dictionaries
         $this->dictionaries=array();
         /* Example:
         $this->dictionaries=array(
-            'langs'=>'mylangfile@txdo_adherent',
+            'langs'=>'mylangfile@txdoAdherent',
             'tabname'=>array(MAIN_DB_PREFIX."table1",MAIN_DB_PREFIX."table2",MAIN_DB_PREFIX."table3"),      // List of tables we want to see into dictonnary editor
             'tablib'=>array("Table1","Table2","Table3"),                                                    // Label of tables
             'tabsql'=>array('SELECT f.rowid as rowid, f.code, f.label, f.active FROM '.MAIN_DB_PREFIX.'table1 as f','SELECT f.rowid as rowid, f.code, f.label, f.active FROM '.MAIN_DB_PREFIX.'table2 as f','SELECT f.rowid as rowid, f.code, f.label, f.active FROM '.MAIN_DB_PREFIX.'table3 as f'),   // Request to select fields
@@ -175,9 +175,9 @@ class modTxdoAdherent extends DolibarrModules
         $this->boxes = array();         // List of boxes
         // Example:
         //$this->boxes=array(
-        //    0=>array('file'=>'myboxa.php@txdo_adherent','note'=>'','enabledbydefaulton'=>'Home'),
-        //    1=>array('file'=>'myboxb.php@txdo_adherent','note'=>''),
-        //    2=>array('file'=>'myboxc.php@txdo_adherent','note'=>'')
+        //    0=>array('file'=>'myboxa.php@txdoAdherent','note'=>'','enabledbydefaulton'=>'Home'),
+        //    1=>array('file'=>'myboxb.php@txdoAdherent','note'=>''),
+        //    2=>array('file'=>'myboxc.php@txdoAdherent','note'=>'')
         //);
 
         // Cronjobs
@@ -209,12 +209,12 @@ class modTxdoAdherent extends DolibarrModules
         //XXX//    'fk_menu'=>'',                          // '' if this is a top menu. For left menu, use 'fk_mainmenu=xxx' or 'fk_mainmenu=xxx,fk_leftmenu=yyy' where xxx is mainmenucode and yyy is a leftmenucode
         //XXX//    'type'=>'top',                          // This is a Top menu entry
         //XXX//    'titre'=>'Adhérent Txdo',
-        //XXX//    'mainmenu'=>'txdo_adherent',
-        //XXX//    'leftmenu'=>'txdo_adherent',
-        //XXX//    'url'=>'/txdo_adherent/adherent/page.php',
+        //XXX//    'mainmenu'=>'txdoAdherent',
+        //XXX//    'leftmenu'=>'txdoAdherent',
+        //XXX//    'url'=>'/txdoAdherent/adherent/page.php',
         //XXX//    //'langs'=>'mylangfile@mymodule',         // Lang file to use (without .lang) by module. File must be in langs/code_CODE/ directory.
         //XXX//    'position'=>100,
-        //XXX//    'enabled'=>'$conf->txdo_adherent->enabled',
+        //XXX//    'enabled'=>'$conf->txdoAdherent->enabled',
         //XXX//    'perms'=>'0',                           // Use 'perms'=>'$user->rights->mymodule->level1->level2' if you want your menu with a permission rules
         //XXX//    'user'=>2                               // 0=Menu for internal users, 1=external users, 2=both
         //XXX//);                             
@@ -232,7 +232,7 @@ class modTxdoAdherent extends DolibarrModules
     {
         $sql = array();
 
-        //$this->_load_tables('/txdo_adherent/sql/');
+        //$this->_load_tables('/txdoAdherent/sql/');
 
         return $this->_init($sql, $options);
     }
