@@ -1,0 +1,10 @@
+fieldset { margin-top: 15px; }
+legend   { font-size: 160%; font-weight: bold; color: #866; }
+.adherentid { border-radius: 25px;color:#FFF;background-color:#866;padding: 2px 13px;margin-right: 6px;text-align:center; }
+#grand_total {  text-align: center; font-size: 180%; font-weight: 600; padding-top: 10px; }
+#recurendu { font-size: 14pt; }
+tr.entete { background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(230,230,230,0.4) 100%) }
+#empty_basket td { text-align: center; font-size: 180%; font-weight: 600; padding: 10px; }
+#type_paiement { font-size: 14pt; text-align: center; width: 20%; margin-left: 40%; font-size: 8pt; }
+.btnTypePaiement { width: 125px; height: 40px; }
+.mode_paiement { border-collapse: collapse; font-size: 18pt; width: 50%; margin: 0 auto; text-align: center; margin-top: 17px; }
