@@ -221,11 +221,14 @@ class modTxdoStats extends DolibarrModules
 
 
         $this->menu[$r++]=array(
-            'fk_menu'=>'fk_mainmenu=members,fk_leftmenu=setup',
+            'fk_menu'=>'fk_mainmenu=members,fk_leftmenu=members',
             'type'=>'left',
             'titre'=>"Exports Txirrind'Ola",
-            'url'=>'/txdoStats/mailjet_page.php',
+			'mainmenu'=>'members',
+			'leftmenu'=>'members',
+            'url'=>'/txdo_stats/mailjet_page.php',
             'perms'=> '$user->rights->export->lire',
+			'enabled'=>'1',
             'user'=>0
         );
     }
